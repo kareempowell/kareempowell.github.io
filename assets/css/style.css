@@ -347,15 +347,17 @@ h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 84px;
-  font-family: "Satisfy", serif;
+  font-size: 106px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Open Sans", serif;
   color: #fff;
 }
 
 #hero h2 {
   color: #eee;
   margin-bottom: 50px;
-  font-size: 56px;
+  font-size: 25px;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
