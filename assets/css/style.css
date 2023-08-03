@@ -451,7 +451,7 @@ section {
   z-index: 2;
 }
 
-@media (max-width: 575px) {
+/*@media (max-width: 575px) {
   .section-title h2 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -460,7 +460,7 @@ section {
   .section-title span {
     font-size: 38px;
   }
-}
+}*/
 
 /*--------------------------------------------------------------
 # Breadcrumbs
