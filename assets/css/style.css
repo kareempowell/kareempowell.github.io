@@ -606,13 +606,13 @@ section {
 .about .image {
   background: url("../img/me.jpg") center center no-repeat;
   background-size: cover;
-  min-height: 600px;
   margin-bottom: 20px; /* Adjust this value as needed */
+  /*min-height: 600px;
   image-rendering: -webkit-optimize-contrast;
   -webkit-backface-visibility: hidden;
   -ms-transform: translateZ(0);
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  transform: translateZ(0);*/
 }
 
 .about .skills-content {
