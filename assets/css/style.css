@@ -609,6 +609,11 @@ section {
   min-height: 600px;
   margin-bottom: 20px; /* Adjust this value as needed */
   image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 }
 
 .about .skills-content {
