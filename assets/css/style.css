@@ -608,6 +608,7 @@ section {
   background-size: cover;
   min-height: 600px;
   margin-bottom: 20px; /* Adjust this value as needed */
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .about .skills-content {
