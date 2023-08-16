@@ -608,12 +608,7 @@ section {
   background-size: cover;
   margin-bottom: 20px; /* Adjust this value as needed */
   min-height: Auto;
-  /*min-height: 600px;
-  image-rendering: -webkit-optimize-contrast;
-  -webkit-backface-visibility: hidden;
-  -ms-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);*/
+  /*min-height: 600px;*/
 }
 
 .about .skills-content {
