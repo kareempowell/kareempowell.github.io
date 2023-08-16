@@ -609,6 +609,10 @@ section {
   min-height: 600px;
   margin-bottom: 20px; /* Adjust this value as needed */
   image-rendering: -webkit-optimize-contrast;
+  -webkit-backface-visibility: hidden;
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .about .skills-content {
