@@ -607,7 +607,7 @@ section {
   background: url("../img/me.jpg") center center no-repeat;
   background-size: cover;
   margin-bottom: 20px; /* Adjust this value as needed */
-  min-height: Auto;
+  min-height: 75%;
   /*min-height: 600px;*/
 }
 
