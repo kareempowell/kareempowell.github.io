@@ -608,6 +608,11 @@ section {
   background-size: cover;
   margin-bottom: 20px; /* Adjust this value as needed */
   min-height: 600px;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .about .skills-content {
