@@ -607,6 +607,7 @@ section {
   background: url("../img/me.jpg") center center no-repeat;
   background-size: cover;
   margin-bottom: 20px; /* Adjust this value as needed */
+  height: 100%;
   min-height: 600px;
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
