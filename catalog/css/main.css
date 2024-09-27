@@ -216,8 +216,7 @@ img {
 img1 {
   vertical-align: middle;
   border-style: none;
-  max-width: 50%;
-  max-height: 50%
+  transform: scale(0.5);
 }
 
 svg:not(:root) {
