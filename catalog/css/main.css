@@ -489,7 +489,14 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto;
+  
 }
+.img-fluid1 {
+  max-width: 100%;
+  height: auto;
+  transform: scale(0.5);
+}
+
 
 .img-thumbnail {
   padding: 0.25rem;
