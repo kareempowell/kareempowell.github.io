@@ -213,11 +213,6 @@ img {
   vertical-align: middle;
   border-style: none;
 }
-img1 {
-  vertical-align: middle;
-  border-style: none;
-  transform: scale(0.5);
-}
 
 svg:not(:root) {
   overflow: hidden;
