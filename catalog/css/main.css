@@ -482,14 +482,9 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 20%;
   height: auto;
   
-}
-.img-fluid1 {
-  max-width: 100%;
-  height: auto;
-  transform: scale(0.5);
 }
 
 
