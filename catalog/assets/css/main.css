@@ -63,7 +63,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: "Work Sans", sans-serif;
 }
 
 a {
@@ -84,7 +84,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: "Work Sans", sans-serif;
 }
 
 /* PHP Email Form Messages
@@ -212,7 +212,7 @@ h6 {
 .navmenu a:focus {
   color: var(--nav-dropdown-color);
   padding: 10px 20px;
-  font-family: var(--nav-font);
+  font-family: "Work Sans", sans-serif;
   font-size: 17px;
   font-weight: 500;
   display: flex;
@@ -928,7 +928,7 @@ section,
 .pricing h4 {
   font-size: 48px;
   color: var(--accent-color);
-  font-family: var(--heading-font);
+  font-family: "Work Sans", sans-serif;
   font-weight: 400;
 }
 
@@ -983,7 +983,7 @@ section,
   transition: none;
   font-size: 16px;
   font-weight: 500;
-  font-family: var(--heading-font);
+  font-family: "Work Sans", sans-serif;
   transition: 0.3s;
 }
 
