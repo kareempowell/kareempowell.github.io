@@ -65,10 +65,18 @@
 				<div class="col-12 col-lg-8 mb-5 mb-lg-0">
 					<article>
 						<h1 class="my-3">Pre-Hospital Telehealth Care Cost Savings Model: Part One</h1>
-						<ul class="post-meta mb-4">
-							<!--<li> <a href="/categories/destination">destination</a>
-							</li>-->
+						<img loading="lazy" decoding="async" src="images/post/blog-1a.jpg" alt="Post Thumbnail" class="img-fluid d-block mx-auto mb-4 w-100">
+						<ul class="post-meta mb-2 mt-4">
+							<li>
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;margin-top:-4px" class="text-dark" viewBox="0 0 16 16">
+									<path d="M5.5 10.5A.5.5 0 0 1 6 10h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
+									<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+									<path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+								</svg> 
+								<span>January 21, 2024</span>
+							</li>
 						</ul>
+						<ul class="post-meta mb-4"></ul>
 						<div class="content text-left">
 							<hr>
 							<h2>Model Overview</h2>
@@ -90,7 +98,6 @@
 							<p>Using annual patient visits per state from the SEDD database and the PCRED costs by regions within the U.S. I calculated patient cost savings per state in 2021. However, due to data being unavailable for the state of Nebraska in 2021, I utilized the multiseries covariate forecasting method in Python, to estimate total 2021 emergency department visits. (Figure 2)</p>
 							<h3></h3>
 							<p><b>B(i). Multivariate time series models</b> are often used in predicting maintenance intervals for industrial machines (such as wind turbines and energy plants, by combining sensor data, such as temperature and mechanical stress, to determine wear and tear and the approximate time till equipment failure. Eleven year emergency department visits for the 31 represented states is split between "test" (2009-12-31 to 2020-12-31) and "training" (2021-01-01 to 2021-12-31) datasets. The recursive forecasting method "LightGBM" is used to train the model to forecast 2021 visits.</p>
-							<p>Applied to oneself, <b>“positive [sentiment] overriding”</b> one’s reactions can help in navigating difficult times. Negative emotions can result in feeling of hopelessness, making it difficult to continue working towards our goals. <b>“Positive overriding”</b> our initial reactions can help us to recognize our strengths and identify the next step towards achieving our goals.</p>
 							<h3></h3>
 							<p>Multiseries recursive forecasting is used to capture similar, underlying trends resulting from changes impacting states across the U.S., along with annual trends in each state. A lag of 1 ensures the model uses the most recent year's predicted value, as input for the following year, to capture short-term trends resulting from changes in insurance provider policies, federal healthcare spending, or health outbreaks such as Covid19. A short rolling window ensures that the model does not annually smooth out short-term fluctuations. The model yields 985,809 predicted emergency visits for Nevada in 2021. Additionally, the model's prediction interval indicates a 95% confidence that the true emergency department visits lie between 849,600 and 1,022,703. (Figure 3) </p>
 							<h3></h3>
