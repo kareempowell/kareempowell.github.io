@@ -28,6 +28,14 @@
 
 	<!-- # Main Style Sheet -->
 	<link rel="stylesheet" href="css/style.css">
+	<nav id="navmenu" class="navmenu">
+		<ul>
+          	<li><a href="../../index.html" class="active">Portfolio Home</a></li>
+          	<li><a href="../../about.html">About</a></li>
+          	<li><a href="https://www.linkedin.com/in/kareem-powell/" target=_blank>LinkedIn</a></li>
+        	</ul>
+        	<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+	</nav>
 </head>
 
 <body>
@@ -43,14 +51,22 @@
           data-target="#navigation"> <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      <div class="collapse navbar-collapse text-right order-lg-2 order-4" id="navigation">
+      <div class="collapse navbar-collapse text-center order-lg-2 order-4" id="navigation">
         <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
           <li class="nav-item"> <a class="nav-link" href="https://kareem-powell.com/about.html">About Me</a>
           </li>
           <li class="nav-item"> <a class="nav-link" href="https://kareem-powell.com">Portfolio</a>
           </li>
-          <li class="nav-item"> <a class="nav-link" href="page.html">Blog</a>
-          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Telehealth Series
+            </a>
+            <div class="dropdown-menu"> 
+		    <a class="dropdown-item" href="personaldevelopment.html">Part One</a>
+		    <a class="dropdown-item" href="healthcare.html">Part Two</a>
+		    <a class="dropdown-item" href="algotrading.html">Part Three</a>
+            </div>
+	  </li>
         </ul>
       </div>
     </nav>
