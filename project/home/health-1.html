@@ -75,17 +75,13 @@
 							<h3></h3>
 							<p>The study, “Cost Benefit Analysis of telehealth in pre-hospital care” focuses on the use of the pre-hospital Telehealth care system, ETHAN in triaging eligible patients who did not require transport to an emergency department”.  <a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank">[1]</a> Building from the study’s results, I created a model utilizing the formulaic cost savings from the implementation of the program to:</p>
 							<h3></h3>
-							<h2>“Quantify The Benefits Of Introducing Similar Telehalth Systems Using 31 Select States Across the U.S.?”</h2>
-							<h3></h3>
-							<p>The model utilizes the formulaic cost savings provided in the study and the total emergency department visits in select states across the U.S. (that do not end in hospital admissions) to calculate the total provider and patient cost savings. </p>
-							<h3></h3>
-							<p>Total emergency department visits were sourced from the Healthcare Utilization’s State Emergency Department Database (SEDD) database developed for the Healthcare Cost Utilization Project (HCUP), through a Federal-State-Industry partnership, sponsored by the Agency for Healthcare Research and Quality (AHRQ)—the federal department responsible for improving the quality of America's health-care system, through access to health-related research and data.</p>
+							<h2>“Quantify The Benefits Of Introducing Similar Telehealth Systems, Using 31 Select States Across the U.S.?”</h2>
 							<h3></h3>
 							<h2>Methodology</h2>
 							<h3></h3>
 							<p><b>A. Study Results: </b>The model successfully simulates the 2024 cost savings across HCUP member states in the U.S.. The 2016 study uses a case-control method that compares the costs of telehealth evaluated EMS patients  to similar characteristic patients, who did not receive telehealth interventions.</p>
 							<h3></h3>
-							<p><b>B. Patient Savings: </b>The 2016 study indicates a 6.7% absolute reduction in hospital ED visits and $357,200 in annual emergency department visits cost savings. This was calculated by multiplying the reduction in study participants by the primary care emergency department costs (PCRED) for the state of Texas (Figure 1).</p>
+							<p><b>B. Patient Savings: </b>The 2016 study indicates a <b>6.7%</b> absolute reduction in hospital ED visits and <b>$357,200</b> in annual emergency department visits cost savings. This was calculated by multiplying the reduction in study participants by the primary care emergency department costs (PCRED) for the state of Texas (Figure 1).</p>
 							<h3></h3>
 							<h2>Figure 1</h2>
 							<div class="container text-center"> 
@@ -95,7 +91,7 @@
 							<a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank" style="font-size: 14px;">ResearchGate</a>
 							</div>
 							<p></p>
-							<p>Applying this reduction to 2021, patient cost savings were determined using total 2021 HCUP emergency department visits (per state) and regional PCRED costs. [The year 2021 was chosen due to being the last known availability of publicly accessible PCRED costs.] I utilized the multiseries covariate forecasting method in Python to provide an estimate for absent Nevada 2021 visits.</p>
+							<p>Using the last available PCRED costs from 2021 and the total HCUP emergency department visits (per state) I calculated the total patient savings. Total emergency department visits were sourced from the Healthcare Utilization’s State Emergency Department Database (SEDD) database developed for the Healthcare Cost Utilization Project (HCUP), through a Federal-State-Industry partnership, sponsored by the Agency for Healthcare Research and Quality (AHRQ)—the federal department responsible for improving the quality of America's health-care system, through access to health-related research and data. I utilized the multiseries covariate forecasting method in Python to provide an estimate for absent Nevada 2021 visits.</p>
 							<h3></h3>
 							<p><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting states across the U.S., along with annual trends in each state. 11 year emergency department visits for the 31 select states are split between "test" (2009-12-31 to 2020-12-31) and "training" (2021-01-01 to 2021-12-31) datasets (Figure 3).</p>
 							<h3></h3>
@@ -109,9 +105,9 @@
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthrecursive.png" alt="Post Thumbnail">
 							<h3></h3>
-							<p>The model yields 985,809 predicted emergency visits for Nevada in 2021, with a 95% confidence that the true emergency department visits lie between 849,600 and 1,022,703.</p>
+							<p>The model yields <b>985,809</b> predicted emergency visits for Nevada in 2021, with a <b>95%</b> confidence that the true emergency department visits lie between <b>849,600</b> and <b>1,022,703</b>.</p>
 							<h3></h3>
-							<p><b>C. Provider Savings:</b> Provider savings was calculated from the study's per visit cost savings of $103. The model then calculates the predicted cost savings across the 31 HCUP states using the real price parity index (RPP), using the state of Texas as the base. The previously forecasted state Emergency Department visits are then used to determine 2024 provider savings, using the compounded annual healthcare inflation rate from 2021 to 2024. </p>
+							<p><b>C. Provider Savings:</b> Provider savings was calculated from the study's per visit cost savings of <b>$103</b>. The model then calculates the predicted cost savings across the 31 HCUP states using the real price parity index (RPP), using the state of Texas as the base. The previously forecasted state Emergency Department visits are then used to determine 2024 provider savings, using the compounded annual healthcare inflation rate from 2021 to 2024. </p>
 							<h3></h3>
 							<p><b>D. Combined Cost Savings</b>  is calculated as the total patient and provider cost savings for the community (Figure 4).</p>
 							<h3></h3>
