@@ -71,7 +71,7 @@
 							<hr>
 							<h2>Model Overview</h2>
 							<h3></h3>
-							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/project-1.jpg" alt="Post Thumbnail">
+							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthpartoneems.jpg" alt="Post Thumbnail">
 							<div class="text-center">
 							<a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank" style="font-size: 14px;">ResearchGate</a>
 							</div>
@@ -83,7 +83,7 @@
 							<h2>Methodology</h2>
 							<h3></h3>
 							<p><b>A. Study Results: </b>The model successfully simulates the 2024 cost savings across HCUP member states in the U.S.. The 2016 study uses a case-control method that compares the costs of telehealth evaluated EMS patients  to similar characteristic patients, who did not receive telehealth interventions.</p>
-							<p></p>
+							<h3></h3>
 							<p><b>B. Patient Savings: </b>The 2016 study indicates a 6.7% absolute reduction in hospital ED visits and $357,200 in annual emergency department visits cost savings. This was calculated by multiplying the reduction in study participants by the primary care emergency department costs (PCRED) for the state of Texas (Figure 1).</p>
 							<h3></h3>
 							<h2>Figure 1</h2>
@@ -99,11 +99,13 @@
 							<p><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting states across the U.S., along with annual trends in each state. 11 year emergency department visits for the 31 select states are split between "test" (2009-12-31 to 2020-12-31) and "training" (2021-01-01 to 2021-12-31) datasets (Figure 3).</p>
 							<h3></h3>
 							<h2>Figure 2</h2>
+							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthtrain.png" alt="Post Thumbnail">
 							<h3></h3>
 							<p>The recursive forecasting method "LightGBM" is used to train the model. A lag of 1 ensures the model uses the most recent year's predicted value, as input for the following year, to capture short-term trends resulting from changes in insurance provider policies, federal healthcare spending, or health outbreaks such as Covid19. A short rolling window ensures that the model does not annually smooth out short-term fluctuations (Figure 3).</p>
 							<h3></h3>
 							<h2>Figure 3</h2>
+							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthrecursive.png" alt="Post Thumbnail">
 							<h3></h3>
 							<p>The model yields 985,809 predicted emergency visits for Nevada in 2021, with a 95% confidence that the true emergency department visits lie between 849,600 and 1,022,703.</p>
@@ -113,8 +115,12 @@
 							<p><b>D. Combined Cost Savings</b>  is calculated as the total patient and provider cost savings for the community (Figure 4).</p>
 							<h3></h3>
 							<h2>Figure 4</h2>
+							<p></p>
 							<div class="container text-center"> 
 							<iframe width="800" height="650" align="middle" src="https://lookerstudio.google.com/embed/reporting/6d2c1f09-3b4f-4b01-9cdd-ec7f91dec9c0/page/SFMhE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+							</div>
+							<div class="text-center">
+							<a style="font-size: 14px;">Note: Drilldown using the arrows in the graph above.</a>
 							</div>
 							<h3></h3>
 						</div>
