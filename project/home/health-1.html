@@ -86,21 +86,27 @@
 							</div>
 							<h2>Methodology</h2>
 							<h3></h3>
-							<p><b>A. Model Inputs: </b>To simulate the 2024 cost savings across select states in the U.S., the model utilizes various inputs including: </p>
+							<h2>A. Model Inputs</h2>
+							<h3></h3>
+							<p>To simulate the 2024 cost savings across select states in the U.S., the model utilizes various inputs including: </p>
 							<p></p>
-							<ol>
+							<ul>
 								<li>the study’s formulaic cost savings for patients and providers, </li>
 								<li>annual health inflation rates from 2016 to 2021,</li>
 								<li>regional price parities per state,</li>
 								<li>total 2021 treat and release emergency department visits,<sup>(1)</sup></li>
 								<li>and 2021 regional primary care related costs (PCRED) per region. </li>
-							</ol>
+							</ul>
 							<h3></h3>
 							<p>The model calculates total patient and provider savings across select states in the U.S., combining these values to provide total community savings.</p>
 							<h3></h3>
-							<p><b>B. Patient Savings: </b>The model determined total patient savings using available PCRED costs from 2021 and the total HCUP emergency department visits per state. To predict missing 2021 emergency department visit data from the state of Nevada, I utilized the multiseries covariate forecasting method in Python.</p>
+							<h2>B. Patient Savings</h2>
 							<h3></h3>
-							<li><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting states across the U.S., along with annual trends in each state. 11 year emergency department visits for the 31 select states are split between "test" (2009-12-31 to 2020-12-31) and "training" (2021-01-01 to 2021-12-31) datasets (Figure 3).</li>
+							<p>The model determined total patient savings using available PCRED costs from 2021 and the total HCUP emergency department visits per state. To predict missing 2021 emergency department visit data from the state of Nevada, I utilized the multiseries covariate forecasting method in Python.</p>
+							<h3></h3>
+							<h2>Bi. Multiseries recursive forecasting</h2>
+							<h3></h3>
+							<li>is used to capture underlying trends impacting states across the U.S., along with annual trends in each state. 11 year emergency department visits for the 31 select states are split between "test" (2009-12-31 to 2020-12-31) and "training" (2021-01-01 to 2021-12-31) datasets (Figure 3).</li>
 							<h3></h3>
 							<h2>Figure 2</h2>
 							<p></p>
