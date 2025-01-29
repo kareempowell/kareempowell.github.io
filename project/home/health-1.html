@@ -73,11 +73,15 @@
 							<h3></h3>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthstudy-1.png" alt="Post Thumbnail">
 							<h3></h3>
-							<p>“In 2021, the U.S. spent nearly twice as much on health per person than comparable countries–$12,197 compared to $6,514 on average.” <a href="https://www.healthsystemtracker.org/brief/what-drives-health-spending-in-the-u-s-compared-to-other-countries/" target="_blank">[1]</a> Lowering health-related costs is integral to increasing access to care for patients across the U.S..</p>
+							<p>Reducing the costs of healthcare in states across the U.S. is one way of improving individual life expectancy:</p>
+							<p></p>
+								<li>“In 2021, the U.S. spent nearly twice as much per capita on health as comparable countries; $12,197 compared to $6,514 on average.” <a href="https://www.healthsystemtracker.org/brief/what-drives-health-spending-in-the-u-s-compared-to-other-countries/" target="_blank">[1]</a>  </li>
+								<li>“The U.S. also spends nearly 18 percent of its GDP on healthcare, yet Americans die younger and are less healthy than residents of other high-income countries” <a href="https://www.commonwealthfund.org/publications/issue-briefs/2023/jan/us-health-care-global-perspective-2022" target="_blank">[2]</a>  </li>
+								<li>“Fifty-four percent of people with employer coverage, who reported delaying or foregoing care due to high costs, reported that health problems of theirs or family members got worse, as a result.” <a href="https://www.commonwealthfund.org/publications/surveys/2023/oct/paying-for-it-costs-debt-americans-sicker-poorer-2023-affordability-survey" target="_blank">[3]</a>  </li>
 							<h3></h3>
-							<p>The study, “Cost Benefit Analysis of telehealth in pre-hospital care”, conducted in Houston, Texas in 2016, evaluates the total cost savings of the telehealth care system, ETHAN, to redirect eligible patients to less cost-intensive services; from ambulances to taxis, from emergency departments to urgent cares. <a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank">[2]</a></p>
+							<p>The study, “Cost Benefit Analysis of telehealth in pre-hospital care”, (conducted in Houston, Texas, 2016), evaluates the cost savings of a telehealth care system (ETHAN) to redirect eligible patients to less cost-intensive services; such as from ambulances to taxis and emergency departments (ED) to urgent cares. <a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank">[2]</a></p>
 							<h3></h3>
-							<p>To identify the potential cost benefits of implementing similar programs across the U.S., I designed and implemented a “<b>Pre-Hospital Telehealth Cost Saving Model</b>” using the 2016 study’s formulaic city-level cost savings. The model’s results indicates <b>2.48%</b> to <b>16.22%</b> cost savings, as a percentage of total <b>"health and hospital"</b> spend in select states across the U.S.–emphasizing the cost benefits of telehealth care systems.</p>
+							<p>To identify potential cost savings of “pre-hospital telehealth programs”, I designed and implemented a <em>Telehealth Cost Savings Model</em> using formulaic cost savings from the 2016 study: “Cost Benefit Analysis of telehealth in pre-hospital care”. Model results indicate immense 2024 state-level cost savings: ranging from <b>2.48%</b> to <b>16.22%</b> (as a percentage of annual health and hospital expenditure); emphasizing the immense [<em>potential</em>] cost savings of deploying similar programs within the United States.</p>
 							<div class="container text-center"> 
 							<iframe width="800" height="650" src="https://lookerstudio.google.com/embed/reporting/6d2c1f09-3b4f-4b01-9cdd-ec7f91dec9c0/page/p_jyk25d58od" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 							</div>
@@ -88,39 +92,42 @@
 							<h3></h3>
 							<h2>A. Model Inputs</h2>
 							<h3></h3>
-							<p>To simulate the 2024 cost savings across select states in the U.S., the model utilizes various inputs including: </p>
+							<p>To simulate the 2024 cost savings, across thirty-one states in the U.S., the model utilizes the following inputs:</p>
 							<p></p>
-								<li>the study’s formulaic cost savings for patients and providers, </li>
-								<li>annual health inflation rates from 2016 to 2021,</li>
-								<li>regional price parities per state,</li>
-								<li>total 2021 treat and release emergency department visits,<sup>(1)</sup></li>
-								<li>and 2021 regional primary care related costs (PCRED) per region. </li>
+								<li>the study’s formulaic cost savings (from 2016) for patients and providers</li>
+								<li>annual health inflation rates from 2016 to 2021</li>
+								<li>2021 regional price parities per state</li>
+								<li>total 2021 treat and release ED visits<sup>(1)</sup></li>
+								<li>2021 regional primary care related costs (PCRED) per region</li>
 							<h3></h3>
 							<p>The model calculates total patient and provider savings across select states in the U.S., combining these values to provide total community savings.</p>
 							<h3></h3>
 							<h2>B. Patient Savings</h2>
 							<h3></h3>
-							<p>The model determined total patient savings using available PCRED costs from 2021 and the total HCUP emergency department visits per state. To predict missing 2021 emergency department visit data from the state of Nevada, I utilized the multiseries covariate forecasting method in Python.</p>
+							<p>The model determined total patient savings using 2021 PCRED costs and the total ED visits per state in 2021. Missing Nevada ED visit data was estimated using dependent multi-series&mdash;or multivariate&mdash;forecasting in Python.</p>
 							<h3></h3>
-							<h2>Bi. Multiseries recursive forecasting</h2>
-							<h3></h3>
-							<p>Is used to capture underlying trends impacting states across the U.S., along with annual trends in each state. 11 year emergency department visits for the 31 select states are split between "test" (2009-12-31 to 2020-12-31) and "training" (2021-01-01 to 2021-12-31) datasets (Figure 3).</p>
+							<p><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting state ED visits. The eleven-year ED visit data is then split between "test" and "training" evaluation sets (Figure 2). </p>
 							<h3></h3>
 							<h2>Figure 2</h2>
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthtrain.png" alt="Post Thumbnail">
+							<div class="text-center">
+							<a href="https://skforecast.org/0.14.0/user_guides/dependent-multi-series-multivariate-forecasting" target="_blank" style="font-size: 14px;">Package: skforecast.org</a>
+							</div>
 							<h3></h3>
-							<p>The recursive forecasting method "LightGBM" is used to train the model. A lag of 1 instructs the model to use the most recent year's predicted value as input for the following year; this ensures to capture short-term trends resulting from changes in insurance provider policies, federal healthcare spending and health outbreaks such as Covid19. A short rolling window ensures the model does not smooth out short-term fluctuations (Figure 3).</p>
+							<p>The recursive method "LightGBM" is used to train the model. A lag of 1 ensures the model uses  the most recent year's predicted values, as inputs for the following year; ensuring the model is able to capture “short-term” trends including changes to insurance provider policies, federal healthcare spending, and health outbreaks (such as Covid19). “Shorter” rolling window features ensure the model does not “smooth out” short-term, year-over-year fluctuations (Figure 3).</p>
 							<h3></h3>
 							<h2>Figure 3</h2>
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthrecursive.png" alt="Post Thumbnail">
 							<h3></h3>
+							<p>The model yields <b>985,809</b> ED visits for Nevada in 2021, with a 95% confidence that the true value lies between <b>849,600</b> and <b>1,022,703</b>.</p>
 							<p>The model yields <b>985,809</b> predicted emergency visits for Nevada in 2021 with a 95% confidence that the true emergency department visits lie between <b>849,600</b> and <b>1,022,703</b>.</p>
 							<h3></h3>
-							<p><b>C. Provider Savings:</b> Provider savings was calculated from the study's <b>$103</b> per visit cost savings. The model determines the predicted cost savings across the 31 HCUP states, using the real price parity index (RPP) with the state of Texas as base. State emergency department visits are used to determine 2021 provider savings, inflated to 2024, using the compounded annual healthcare inflation rate. </p>
+							<h2>C. Provider Savings</h2>
+							<p>Provider savings was calculated from the study's <b>$103</b> per visit cost-savings. The model determines the predicted cost savings across the thirty-one selected states, using the real price parity index (RPP) with the state of Texas acting as a base. State ED visits are then used to determine 2021 state-level provider savings, which is then forecasted to <b>“2024 savings”</b> using the compounded annual healthcare inflation rate, from 2022 to 2024.</p>
 							<h3></h3>
-							<p><b>D. Combined Cost Savings</b>  is calculated as the sum of patient and provider cost savings for each state (Figure 4).</p>
+							<p><b>D. Combined Cost Savings</b> is calculated as the sum of patient and provider cost savings across each state (Figure 4).</p>
 							<h3></h3>
 							<h2>Figure 4</h2>
 							<p></p>
@@ -131,7 +138,7 @@
 							<a style="font-size: 14px;">Drilldown using the dropdown above.</a>
 							</div>
 							<h3></h3>
-							<p style="font-size: 16px;"> <sup>(1)</sup>Total emergency department visits were sourced from the Healthcare Utilization’s State Emergency Department Database (SEDD) database, developed for the Healthcare Cost Utilization Project (HCUP), through a Federal-State-Industry partnership sponsored by the Agency for Healthcare Research and Quality (AHRQ)—the federal department responsible for improving the quality of America's health-care system, through access to health-related research and data.</p>
+							<p style="font-size: 16px;"> <sup>(1)</sup>Total “ED visits” was sourced from the Healthcare Utilization’s State Emergency Department Database (SEDD) database–which is sponsored by the federal department Agency for Healthcare Research and Quality (AHRQ).</p>
 							<h3></h3>
 							<a href="https://deepai.org/" target="_blank" style="font-size: 14px;">Graphic: Deepai.org</a>
 						</div>
