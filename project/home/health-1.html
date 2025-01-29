@@ -73,45 +73,42 @@
 							<h3></h3>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthpartoneems.jpg" alt="Post Thumbnail">
 							<h3></h3>
-							<p>The study, “Cost Benefit Analysis of telehealth in pre-hospital care” focuses on the use of the pre-hospital Telehealth care system, ETHAN in triaging eligible patients who did not require transport to an emergency department”.  <a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank">[1]</a> </p>
+							<p>“In 2021, the U.S. spent nearly twice as much on health per person than comparable countries–$12,197 compared to $6,514 on average.” <a href="https://www.healthsystemtracker.org/brief/what-drives-health-spending-in-the-u-s-compared-to-other-countries/" target="_blank">[1]</a> Lowering health-related costs is integral to increasing access to care for patients across the U.S..</p>
 							<h3></h3>
-							<p>Building from the study’s results, I created a model utilizing the formulaic cost savings from the implementation of the program to:</p>
-							<h3></h3>
-							<h2>“Quantify The Benefits Of Pre-Hospital Telehealth Across the U.S.?”</h2>
-							<h3></h3>
+							<p>To identify the potential cost benefits of implementing similar programs across the U.S., I designed and implemented a “<b>Pre-Hospital Telehealth Cost Saving Model</b>” using the 2016 study’s formulaic city-level cost savings. The model’s results indicates <b>2.48%</b> to <b>16.22%</b> cost savings, as a percentage of total <b>"health and hospital"</b> spend in select states across the U.S.–emphasizing the cost benefits of telehealth care systems.</p>
+							<div class="container text-center"> 
+							<iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/6d2c1f09-3b4f-4b01-9cdd-ec7f91dec9c0/page/p_jyk25d58od" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+							</div>
 							<h2>Methodology</h2>
 							<h3></h3>
-							<p><b>A. Study Results: </b>The model successfully simulates the 2024 cost savings across HCUP member states in the U.S.. The 2016 study uses a case-control method that compares the costs of telehealth evaluated EMS patients  to similar characteristic patients, who did not receive telehealth interventions.</p>
+							<p><b>A. Model Inputs: </b>To simulate the 2024 cost savings across select states in the U.S., the model utilizes various inputs including: </p>
 							<h3></h3>
-							<p><b>B. Patient Savings: </b>The 2016 study indicates a <b>6.7%</b> absolute reduction in hospital ED visits and <b>$357,200</b> in annual emergency department visits cost savings. This was calculated by multiplying the reduction in study participants by the primary care emergency department costs (PCRED) for the state of Texas (Figure 1).</p>
+							<li>the study’s formulaic cost savings for patients and providers, </li>
+							<li>annual health inflation rates from 2016 to 2021,</li>
+							<li>regional price parities per state,</li>
+							<li>total 2021 treat and release emergency department visits,<sup>(1)</sup></li>
+							<li>and 2021 regional primary care related costs (PCRED) per region. </li>
 							<h3></h3>
-							<h2>Figure 1</h2>
-							<div class="container text-center"> 
-							<iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/6d2c1f09-3b4f-4b01-9cdd-ec7f91dec9c0/page/p_7cfr62t7od" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-							</div>
-							<div class="text-center">
-							<a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank" style="font-size: 14px;">ResearchGate</a>
-							</div>
+							<p>The model calculates total patient and provider savings across select states in the U.S., combining these values to provide total community savings.</p>
+							<p><b>B. Patient Savings: </b>The model determined total patient savings using available PCRED costs from 2021 and the total HCUP emergency department visits per state. To predict missing 2021 emergency department visit data from the state of Nevada, I utilized the multiseries covariate forecasting method in Python.</p>
 							<h3></h3>
-							<p>Using the last available PCRED costs from 2021 and the total HCUP emergency department visits (per state) I calculated the total patient savings. Total emergency department visits were sourced from the Healthcare Utilization’s State Emergency Department Database (SEDD) database developed for the Healthcare Cost Utilization Project (HCUP). I utilized the multiseries covariate forecasting method in Python to provide an estimate for absent Nevada 2021 visits.</p>
-							<h3></h3>
-							<p><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting states across the U.S., along with annual trends in each state. 11 year emergency department visits for the 31 select states are split between "test" (2009-12-31 to 2020-12-31) and "training" (2021-01-01 to 2021-12-31) datasets (Figure 3).</p>
+							<li><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting states across the U.S., along with annual trends in each state. 11 year emergency department visits for the 31 select states are split between "test" (2009-12-31 to 2020-12-31) and "training" (2021-01-01 to 2021-12-31) datasets (Figure 3).</li>
 							<h3></h3>
 							<h2>Figure 2</h2>
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthtrain.png" alt="Post Thumbnail">
 							<h3></h3>
-							<p>The recursive forecasting method "LightGBM" is used to train the model. A lag of 1 ensures the model uses the most recent year's predicted value, as input for the following year, to capture short-term trends resulting from changes in insurance provider policies, federal healthcare spending, or health outbreaks such as Covid19. A short rolling window ensures that the model does not annually smooth out short-term fluctuations (Figure 3).</p>
+							<p>The recursive forecasting method "LightGBM" is used to train the model. A lag of 1 instructs the model to use the most recent year's predicted value as input for the following year; this ensures to capture short-term trends resulting from changes in insurance provider policies, federal healthcare spending and health outbreaks such as Covid19. A short rolling window ensures the model does not smooth out short-term fluctuations (Figure 3).</p>
 							<h3></h3>
 							<h2>Figure 3</h2>
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthrecursive.png" alt="Post Thumbnail">
 							<h3></h3>
-							<p>The model yields <b>985,809</b> predicted emergency visits for Nevada in 2021, with a <b>95%</b> confidence that the true emergency department visits lie between <b>849,600</b> and <b>1,022,703</b>.</p>
+							<p>The model yields <b>985,809</b> predicted emergency visits for Nevada in 2021 with a 95% confidence that the true emergency department visits lie between <b>849,600</b> and <b>1,022,703</b>.</p>
 							<h3></h3>
-							<p><b>C. Provider Savings:</b> Provider savings was calculated from the study's per visit cost savings of <b>$103</b>. The model then calculates the predicted cost savings across the 31 HCUP states using the real price parity index (RPP), using the state of Texas as the base. The previously forecasted state Emergency Department visits are then used to determine 2024 provider savings, using the compounded annual healthcare inflation rate from 2021 to 2024. </p>
+							<p><b>C. Provider Savings:</b> Provider savings was calculated from the study's <b>$103</b> per visit cost savings. The model determines the predicted cost savings across the 31 HCUP states, using the real price parity index (RPP) with the state of Texas as base. State emergency department visits are used to determine 2021 provider savings, inflated to 2024, using the compounded annual healthcare inflation rate. </p>
 							<h3></h3>
-							<p><b>D. Combined Cost Savings</b>  is calculated as the total patient and provider cost savings for the community (Figure 4).</p>
+							<p><b>D. Combined Cost Savings</b>  is calculated as the sum of patient and provider cost savings for each state (Figure 4).</p>
 							<h3></h3>
 							<h2>Figure 4</h2>
 							<p></p>
@@ -121,6 +118,7 @@
 							<div class="text-center">
 							<a style="font-size: 14px;">Drilldown using the dropdown above.</a>
 							</div>
+							<p><sup>(1)</sup>Total emergency department visits were sourced from the Healthcare Utilization’s State Emergency Department Database (SEDD) database, developed for the Healthcare Cost Utilization Project (HCUP), through a Federal-State-Industry partnership sponsored by the Agency for Healthcare Research and Quality (AHRQ)—the federal department responsible for improving the quality of America's health-care system, through access to health-related research and data.</p>
 							<h3></h3>
 							<a href="https://deepai.org/" target="_blank" style="font-size: 14px;">Graphic: Deepai.org</a>
 						</div>
