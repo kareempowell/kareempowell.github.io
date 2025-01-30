@@ -72,23 +72,23 @@
 							<h3></h3>
 							<img loading="lazy" decoding="async" class="d-block mx-auto" src="images/post/healthstudy-1.png" alt="Post Thumbnail">
 							<h3></h3>
-							<p>Reducing health-related costs is one way of improving individual life expectancy within the United States.</p>
+							<p>Reducing health costs is one way to improve individual life expectancy in the United States.</p>
 							<h3></h3>
 							<p>From a few studies:</p>
 							<h3></h3>
-							<li><a href="https://www.commonwealthfund.org/publications/issue-briefs/2023/jan/us-health-care-global-perspective-2022" target="_blank">“The U.S. spends nearly 18 percent of GDP on healthcare yet Americans die younger and are less healthy than residents of other high-income countries”</a></li>
+							<li><a href="https://www.commonwealthfund.org/publications/issue-briefs/2023/jan/us-health-care-global-perspective-2022" target="_blank">“The U.S. spends nearly 18 percent of GDP on healthcare, yet Americans die younger and are less healthy than residents of other high-income countries”</a></li>
 							<p></p>
 							<p></p>
-							<li><a href="https://www.healthsystemtracker.org/brief/what-drives-health-spending-in-the-u-s-compared-to-other-countries/" target="_blank">“In 2021, the U.S. spent nearly twice as much per capita on health as comparable countries ($12,197 compared to $6,514 on average).”</a></li>
+							<li><a href="https://www.healthsystemtracker.org/brief/what-drives-health-spending-in-the-u-s-compared-to-other-countries/" target="_blank">“In 2021, the U.S. spent nearly twice as much per capita on health as comparable countries: $12,197 compared to $6,514 on average.”</a></li>
 							<p></p>
 							<p></p>
-							<li><a href="https://www.commonwealthfund.org/publications/surveys/2023/oct/paying-for-it-costs-debt-americans-sicker-poorer-2023-affordability-survey" target="_blank">“Fifty-four percent of people with employer coverage who reported delaying or foregoing care, due to high costs, reported that health problems of theirs or family members got worse.”</a></li>
+							<li><a href="https://www.commonwealthfund.org/publications/surveys/2023/oct/paying-for-it-costs-debt-americans-sicker-poorer-2023-affordability-survey" target="_blank">“Fifty-four percent of people with employer coverage who reported delaying or foregoing care due to high costs, reported that health problems of theirs or family members got worse.”</a></li>
 							<h3></h3>
-							<p>To identify potential cost savings of “pre-hospital telehealth programs”, I designed and implemented a <b>Telehealth Cost Savings Model</b> using formulaic cost savings from the 2016 study: <a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank">“Cost Benefit Analysis of telehealth in pre-hospital care”</a>. </p>
+							<p>To identify potential cost savings of “pre-hospital telehealth programs”, I designed and implemented a <b>Telehealth Cost Savings Model</b>, using formulaic cost savings from the 2016 study: <a href="https://www.researchgate.net/publication/311356883_Cost-benefit_analysis_of_telehealth_in_pre-hospital_care" target="_blank">“Cost Benefit Analysis of telehealth in pre-hospital care”</a>. </p>
 							<h3></h3>
-							<p>The study, conducted in Houston, Texas, calculates patient and provider cost savings of the ETHAN telehealth system from redirecting eligible patients to less cost-intensive services; such as from ambulances to taxis and emergency departments (EDs) to urgent cares. </p>
+							<p>The study, conducted in Houston, Texas, calculates patient and provider cost savings of the ETHAN telehealth system in redirecting eligible patients to less cost-intensive services; such as from ambulances to taxis and emergency departments (EDs) to urgent cares. </p>
 							<h3></h3>
-							<p>Model results indicate immense 2024 state-level cost savings: ranging from <b>2.48%</b> to <b>16.22%</b> as a percentage of annual health and hospital expenditure; eluding to immense potential savings from similar programs.</p>
+							<p>Model results indicate immense 2024 state-level cost savings: ranging from <b>2.48%</b> to <b>16.22%</b>, as a percentage of annual health and hospital expenditure-alluding to immense potential savings from similar telehealth programs.</p>
 							<div class="container text-center"> 
 							<iframe width="800" height="650" src="https://lookerstudio.google.com/embed/reporting/6d2c1f09-3b4f-4b01-9cdd-ec7f91dec9c0/page/p_jyk25d58od" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 							</div>
@@ -99,7 +99,7 @@
 							<h3></h3>
 							<h2>A. Model Inputs</h2>
 							<h3></h3>
-							<p>To simulate the 2024 cost savings, across thirty-one states in the U.S., the model utilizes the following inputs:</p>
+							<p>To simulate the 2024 cost savings across thirty-one states in the U.S., the model utilizes the following inputs:</p>
 							<p></p>
 								<li>the study’s formulaic cost savings (from 2016) for patients and providers</li>
 								<li>annual health inflation rates from 2016 to 2021</li>
@@ -107,13 +107,13 @@
 								<li>total 2021 treat and release ED visits<sup>(1)</sup></li>
 								<li>2021 regional primary care related costs (PCRED) per region</li>
 							<h3></h3>
-							<p>The model calculates total patient and provider savings across select states in the U.S., combining these values to provide total community savings.</p>
+							<p>The model calculates total patient and provider savings across select states in the U.S., combining these values to calculate total community savings.</p>
 							<h3></h3>
 							<h2>B. Patient Savings</h2>
 							<h3></h3>
-							<p>The model determined total patient savings using 2021 PCRED costs and the total ED visits per state in 2021. Missing Nevada ED visit data was estimated using dependent multi-series&mdash;or multivariate&mdash;forecasting in Python.</p>
+							<p>The model determined total patient savings, using 2021 PCRED costs and total ED visits per state in 2021. Missing Nevada ED visits data was estimated using dependent multi-series&mdash;or multivariate&mdash;forecasting in Python.</p>
 							<h3></h3>
-							<p><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting state ED visits. The eleven-year ED visit data is then split between "test" and "training" evaluation sets (Figure 2). </p>
+							<p><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting state ED visits. The eleven-year ED visits data is then split between "test" and "training" evaluation sets, as seen in Figure 2 below. </p>
 							<h3></h3>
 							<h2>Figure 2</h2>
 							<p></p>
@@ -122,19 +122,19 @@
 							<a href="https://skforecast.org/0.14.0/user_guides/dependent-multi-series-multivariate-forecasting" target="_blank" style="font-size: 14px;">Package: skforecast.org</a>
 							</div>
 							<h3></h3>
-							<p>The recursive method "LightGBM" is used to train the model. A lag of 1 ensures the model uses  the most recent year's predicted values, as inputs for the following year; ensuring the model is able to capture “short-term” trends including changes to insurance provider policies, federal healthcare spending, and health outbreaks (such as Covid19). “Shorter” rolling window features ensure the model does not “smooth out” short-term, year-over-year fluctuations (Figure 3).</p>
+							<p>The recursive method "LightGBM" is used to train the model. A lag of 1 ensures the model uses  the most recent year's predicted values as inputs for the following year, ensuring the model is able to capture “short-term” trends; including changes in insurance provider policies, federal healthcare spending and health outbreaks (such as Covid19). While, “shorter” rolling window features ensure the model does not “smooth out” short-term, year-over-year fluctuations (Figure 3).</p>
 							<h3></h3>
 							<h2>Figure 3</h2>
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthrecursive.png" alt="Post Thumbnail">
 							<h3></h3>
 							<p>The model yields <b>985,809</b> ED visits for Nevada in 2021, with a 95% confidence that the true value lies between <b>849,600</b> and <b>1,022,703</b>.</p>
-							<p>The model yields <b>985,809</b> predicted emergency visits for Nevada in 2021 with a 95% confidence that the true emergency department visits lie between <b>849,600</b> and <b>1,022,703</b>.</p>
+							<p>The model yields <b>985,809</b> predicted emergency visits for Nevada in 2021&mdash;with a 95% confidence that the true ED visits lie between <b>849,600</b> and <b>1,022,703</b>.</p>
 							<h3></h3>
 							<h2>C. Provider Savings</h2>
-							<p>Provider savings was calculated from the study's <b>$103</b> per visit cost-savings. The model determines the predicted cost savings across the thirty-one selected states, using the real price parity index (RPP) with the state of Texas acting as a base. State ED visits are then used to determine 2021 state-level provider savings, which is then forecasted to <b>“2024 savings”</b> using the compounded annual healthcare inflation rate, from 2022 to 2024.</p>
+							<p>Provider savings was calculated from the study's <b>$103</b> per visit cost-savings. The model determines the predicted cost savings across thirty-one select states using the real price parity index (RPP), with the state of Texas as base. State ED visits are then used to determine 2021 state-level provider savings, which is then forecasted to 2024, using compounded annual healthcare inflation rates from 2022 to 2024.</p>
 							<h3></h3>
-							<p><b>D. Combined Cost Savings</b> is calculated as the sum of patient and provider cost savings across each state (Figure 4).</p>
+							<p><b>D. Combined Cost Savings</b> is calculated as the sum of patient and provider savings across each state as seen in Figure 4 below.</p>
 							<h3></h3>
 							<h2>Figure 4</h2>
 							<p></p>
