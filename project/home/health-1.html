@@ -97,7 +97,7 @@
 							</div>
 							<h2>Methodology</h2>
 							<h3></h3>
-							<h2>A. Model Inputs</h2>
+							<h3>A. Model Inputs</h3>
 							<h3></h3>
 							<p>To simulate the 2024 cost savings across thirty-one states in the U.S., the model utilizes the following inputs:</p>
 							<p></p>
@@ -109,13 +109,13 @@
 							<h3></h3>
 							<p>The model calculates total patient and provider savings across select states in the U.S., combining these values to calculate total community savings.</p>
 							<h3></h3>
-							<h2>B. Patient Savings</h2>
+							<h3>B. Patient Savings</h3>
 							<h3></h3>
 							<p>The model determined total patient savings, using 2021 PCRED costs and total ED visits per state in 2021. Missing Nevada ED visits data was estimated using dependent multi-series&mdash;or multivariate&mdash;forecasting in Python.</p>
 							<h3></h3>
 							<p><b>Bi. Multiseries recursive forecasting</b> is used to capture underlying trends impacting state ED visits. The eleven-year ED visits data is then split between "test" and "training" evaluation sets, as seen in Figure 2 below. </p>
 							<h3></h3>
-							<h2>Figure 2</h2>
+							<h3>Figure 2</h3>
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthtrain.png" alt="Post Thumbnail">
 							<div class="text-center">
@@ -124,19 +124,19 @@
 							<h3></h3>
 							<p>The recursive method "LightGBM" is used to train the model. A lag of 1 ensures the model uses  the most recent year's predicted values as inputs for the following year, ensuring the model is able to capture “short-term” trends; including changes in insurance provider policies, federal healthcare spending and health outbreaks (such as Covid19). While, “shorter” rolling window features ensure the model does not “smooth out” short-term, year-over-year fluctuations (Figure 3).</p>
 							<h3></h3>
-							<h2>Figure 3</h2>
+							<h3>Figure 3</h3>
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthrecursive.png" alt="Post Thumbnail">
 							<h3></h3>
 							<p>The model yields <b>985,809</b> ED visits for Nevada in 2021, with a 95% confidence that the true value lies between <b>849,600</b> and <b>1,022,703</b>.</p>
 							<p>The model yields <b>985,809</b> predicted emergency visits for Nevada in 2021&mdash;with a 95% confidence that the true ED visits lie between <b>849,600</b> and <b>1,022,703</b>.</p>
 							<h3></h3>
-							<h2>C. Provider Savings</h2>
+							<h3>C. Provider Savings</h3>
 							<p>Provider savings was calculated from the study's <b>$103</b> per visit cost-savings. The model determines the predicted cost savings across thirty-one select states using the real price parity index (RPP), with the state of Texas as base. State ED visits are then used to determine 2021 state-level provider savings, which is then forecasted to 2024, using compounded annual healthcare inflation rates from 2022 to 2024.</p>
 							<h3></h3>
 							<p><b>D. Combined Cost Savings</b> is calculated as the sum of patient and provider savings, across each state, as seen in Figure 4 below.</p>
 							<h3></h3>
-							<h2>Figure 4</h2>
+							<h3>Figure 4</h3>
 							<p></p>
 							<div class="container text-center"> 
 							<iframe width="800" height="650" align="middle" src="https://lookerstudio.google.com/embed/reporting/6d2c1f09-3b4f-4b01-9cdd-ec7f91dec9c0/page/SFMhE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
