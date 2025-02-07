@@ -74,11 +74,12 @@
 					<article>
 						<h1>Part One</h1>
 						<ul class="post-meta mb-4"></ul>
+						<img loading="lazy" decoding="async" class="d-block mx-auto" src="images/post/healthstudy-1.png" alt="Post Thumbnail">
+						<h3></h3>	
+						<h3></h3>	
+						<hr>
 						<div class="content text-left">
-							<hr>
 							<h2>Model Overview</h2>
-							<h3></h3>
-							<img loading="lazy" decoding="async" class="d-block mx-auto" src="images/post/healthstudy-1.png" alt="Post Thumbnail">
 							<h3></h3>
 							<p>Reducing healthcare costs is a crucial step toward improving life expectancy and overall health outcomes in the United States. </p>
 							<h3></h3>
@@ -122,7 +123,7 @@
 							<h3></h3>
 							<h2>Bi. Forecasting Emergency Department Visits</h2>
 							<h3></h3>
-							<p>To estimate missing ED data, the model applies <b>multi-series recursive forecasting</b>, which accounts for long-term trends in emergency department visits.</p>
+							<p>To estimate missing ED data, the model applies <b>multi-series recursive forecasting</b>, which accounts for underlying trends impacting state emergency department visits.</p>
 							<li><b>Dataset:</b> 11 years of historical ED visit data</li>
 							<li><b>Approach:</b> Splitting data into "training" and "test" sets for evaluation <em>(Figure 2)</em></li>
 							<li><b>Tool Used:</b> skforecast.org package</li>
@@ -140,7 +141,7 @@
 							<li><b>Federal healthcare spending adjustments</b>b></li>
 							<li>The impact of <b>public health emergencies (e.g., COVID-19)</b></li>
 							<h3></h3>
-							<p>By using a <b>shorter rolling window</b>, the model preserves year-over-year variations instead of averaging them out. <em>(Figure 3)</em></p>
+							<p>By using a <b>shorter rolling window</b>, the model preserves year-over-year variations instead of smoothing them out. <em>(Figure 3)</em></p>
 							<h2>Figure 3</h2>
 							<p></p>
 							<img loading="lazy" decoding="async" class="img-fluid d-block mx-auto" src="images/post/healthrecursive.png" alt="Post Thumbnail">
