@@ -1,26 +1,4 @@
 class MomentumTimeSeries(bt.strategy)":
-
-    def connect_to_oanda(self):
-      !pip install git+https://github.com/yhilpisch/tpqoa.git
-      from google.colab import drive
-      drive.mount('/content/drive')
-      import tpqoa
-      import configparser
-      
-      # Create a configparser object
-      config = configparser.ConfigParser()
-      # Read the configuration file
-      config.read('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg')
-      # Check if the 'oanda' section exists
-      if 'oanda' in config:
-          # If the section exists, create the api object
-          api = tpqoa.tpqoa('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg')
-      else:
-          # If the section doesn't exist, print an error message
-          print("Error: 'oanda' section not found in the configuration file.")
-      # You can print the config to check the content
-      # print(config)
-      api = tpqoa.tpqoa('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg')
   
   def select_instrument(self):
     #selecting instruments N.B. 1st line previously data = oanda.get_history
