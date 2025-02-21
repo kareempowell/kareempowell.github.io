@@ -1,0 +1,100 @@
+class MomentumTimeSeries(bt.strategy)":
+
+    def connect_to_oanda(self):
+      !pip install git+https://github.com/yhilpisch/tpqoa.git
+      from google.colab import drive
+      drive.mount('/content/drive')
+      import tpqoa
+      import configparser
+      
+      # Create a configparser object
+      config = configparser.ConfigParser()
+      # Read the configuration file
+      config.read('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg')
+      # Check if the 'oanda' section exists
+      if 'oanda' in config:
+          # If the section exists, create the api object
+          api = tpqoa.tpqoa('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg')
+      else:
+          # If the section doesn't exist, print an error message
+          print("Error: 'oanda' section not found in the configuration file.")
+      # You can print the config to check the content
+      # print(config)
+      api = tpqoa.tpqoa('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg')
+  
+  def select_instrument(self):
+    #selecting instruments N.B. 1st line previously data = oanda.get_history
+    data = api.get_history(
+        instrument='EUR_USD',
+        start='2025-02-06',
+        end='2025-02-07',
+        granularity='M1',
+        price='M'
+    )
+    data.info()
+
+  def measure_performance(self):
+    #Backtesting: Build out momentum strategy | NB. Why is this backtesting?
+    import numpy as np
+    data['returns'] = np.log(data['c'] / data['c'].shift(1))
+    cols = []
+    for momentum in [15, 30, 60, 120, 150]:
+        col = f'p_{momentum}'
+        data[col] = np.sign(data['returns'].rolling(momentum).mean())
+        cols.append(col)
+    
+    #visualize strategy performance | N.B. line 2 previously 'seaborn'
+    from pylab import plt
+    plt.style.use('seaborn-v0_8-colorblind')
+    strats = ['returns']
+    for col in cols:
+        strat = f's_{col[2:]}'
+        data[strat] = data[col].shift(1) * data['returns']
+        strats.append(strat)
+    data[strats].dropna().cumsum().apply(np.exp).plot(cmap='coolwarm');
+
+#initialize a sub-class
+#automating the trading operation
+import pandas as pd
+class MomentumTrader(tpqoa.tpqoa):
+    def __init__(self, config_file, momentum):
+        super(MomentumTrader, self).__init__(config_file)
+        self.momentum = momentum
+        self.min_length = momentum + 1
+        self.position = 0
+        self.units = 10000
+        self.tick_data = pd.DataFrame()
+    def on_success(self, time, bid, ask):
+        trade = False
+        # print(self.ticks, end=' ')
+        self.tick_data = self.tick_data.append(
+            pd.DataFrame({'b': bid, 'a': ask, 'm': (ask + bid) / 2},
+               index=[pd.Timestamp(time).tz_localize(tz=None)])
+        )
+        self.data = self.tick_data.resample('5s', label='right').last().ffill()
+        self.data['r'] = np.log(self.data['m'] / self.data['m'].shift(1))
+        self.data['m'] = self.data['returns'].rolling(self.momentum).mean()
+        self.data.dropna(inplace=True)
+        if len(self.data) > self.min_length:
+            self.min_length += 1
+            if self.data['m'].iloc[-2] > 0 and self.position in [0, -1]:
+              o = api.create_order(self.stream_instrument,
+                             units=(1 - self.position) * self.units,
+                             suppress=True, ret=True)
+              print('\n*** GOING LONG ***')
+              api.print_transactions(tid=int(o['id']) - 1)
+              self.position = 1
+        if self.data['m'].iloc[-2] < 0 and self.position in [0, 1]:
+              o = api.create_order(self.stream_instrument,
+                            units=-(1 + self.position) * self.units,
+                            suppress=True, ret=True)
+              print('\n*** GOING SHORT ***')
+              self.print_transactions(tid=int(o['id']) - 1)
+              self.position = -1
+#may need to leave this for jupityer
+  mt = MomentumTrader('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg', momentum=5)
+  mt.stream_data('EUR_USD', stop=100)
+
+
+
+      
