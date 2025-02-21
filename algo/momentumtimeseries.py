@@ -95,6 +95,17 @@ class MomentumTrader(tpqoa.tpqoa):
   mt = MomentumTrader('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg', momentum=5)
   mt.stream_data('EUR_USD', stop=100)
 
+#Closing out orders
 
-
-      
+def closingactiveorders(self):
+    #[3c]
+    #closing out the final position. shows the complete, detailed order object
+    from pprint import pprint
+    o = mt.create_order('EUR_USD', units=-mt.position * mt.units,
+                        suppress=True, ret = True)
+    print('\n*** POSITION CLOSED ***')
+    mt.print_transactions(tid=int(o['id']) - 1)
+    print('\n')
+    pprint(o)
+    
+          
