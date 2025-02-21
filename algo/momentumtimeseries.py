@@ -1,6 +1,20 @@
 class MomentumTimeSeries(bt.strategy)":
-  
-  def select_instrument(self):
+
+#choose a group of bitcoin, indices, and forex
+
+#iterate through the instruments using the select function
+
+  #for each instrument measure their relative performance and store in a list
+
+  #combine this list in a matrix and provide the securities with the lowest correlation and highest sharpe ratio
+
+#return this preferred list of securities
+
+#then select the securities based on the above
+
+#create a function to place orders for each of these securities. batch ordering?
+
+def select_instrument(self):
     #selecting instruments N.B. 1st line previously data = oanda.get_history
     data = api.get_history(
         instrument='EUR_USD',
