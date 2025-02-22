@@ -1,20 +1,14 @@
-class MomentumTimeSeries(bt.strategy)":
+class algo(object):
 
-#choose a group of bitcoin, indices, and forex
-
-#iterate through the instruments using the select function
-
+  #choose a group of bitcoin, indices, and forex
+  #iterate through the instruments using the select function
   #for each instrument measure their relative performance and store in a list
-
   #combine this list in a matrix and provide the securities with the lowest correlation and highest sharpe ratio
-
-#return this preferred list of securities
-
-#then select the securities based on the above
-
-#create a function to place orders for each of these securities. batch ordering?
-
-def select_instrument(self):
+  #return this preferred list of securities
+  #then select the securities based on the above
+  #create a function to place orders for each of these securities. batch ordering?
+  
+  def select_instrument(self):
     #selecting instruments N.B. 1st line previously data = oanda.get_history
     data = api.get_history(
         instrument='EUR_USD',
@@ -45,8 +39,7 @@ def select_instrument(self):
         strats.append(strat)
     data[strats].dropna().cumsum().apply(np.exp).plot(cmap='coolwarm');
 
-#initialize a sub-class
-#automating the trading operation
+#initialize automation
 import pandas as pd
 class MomentumTrader(tpqoa.tpqoa):
     def __init__(self, config_file, momentum):
@@ -87,27 +80,27 @@ class MomentumTrader(tpqoa.tpqoa):
   mt = MomentumTrader('/content/drive/MyDrive/Paueru/Projects/Models/2. AlgoTrading Models/oanda.cfg', momentum=5)
   mt.stream_data('EUR_USD', stop=100)
 
-#Closing out orders
-
-def closingactiveorders(self):
-    #[3c]
-    #closing out the final position. shows the complete, detailed order object
-    from pprint import pprint
-    o = mt.create_order('EUR_USD', units=-mt.position * mt.units,
-                        suppress=True, ret = True)
-    print('\n*** POSITION CLOSED ***')
-    mt.print_transactions(tid=int(o['id']) - 1)
-    print('\n')
-    pprint(o)
+#initialize close out class
+class closetrades(tpqoa.tpqoa):
+  def closingactiveorders(self):
+      #[3c]
+      #closing out the final position. shows the complete, detailed order object
+      from pprint import pprint
+      o = mt.create_order('EUR_USD', units=-mt.position * mt.units,
+                          suppress=True, ret = True)
+      print('\n*** POSITION CLOSED ***')
+      mt.print_transactions(tid=int(o['id']) - 1)
+      print('\n')
+      pprint(o)
     
           
-#source: https://github.com/GJason88/backtrader-backtests/blob/master/StochasticSR/Stochastic_SR_Backtest.py
-
-import backtrader as bt
-import logging
-import datetime
-import os.path
-import sys
+  #source: https://github.com/GJason88/backtrader-backtests/blob/master/StochasticSR/Stochastic_SR_Backtest.py
+  
+  import backtrader as bt
+  import logging
+  import datetime
+  import os.path
+  import sys
 
 class StochasticSR(bt.Strategy):
     '''Trading strategy that utilizes the Stochastic Oscillator indicator for oversold/overbought entry points, 
