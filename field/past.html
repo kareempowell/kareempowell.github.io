@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>THE FIELD</title>
+  <title>Index - Blogy Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="field/assets/img/thefield.png" rel="icon">
-  <link href="field/assets/img/thefield.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -18,14 +18,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="field/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="field/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="field/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="field/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="field/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="field/assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Blogy
@@ -39,66 +39,67 @@
 <body class="index-page">
 
   <header id="header" class="header position-relative">
-  <div class="container-fluid container-xl px-3 position-relative mb-0">
+    <div class="container-fluid container-xl position-relative">
 
-    <div class="top-row d-flex align-items-center justify-content-between w-100">
-      <!-- Left: Logo -->
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="field/assets/img/thefield.png" alt="The Field Logo" class="d-block" style="height: 2.8rem; width: auto;">
-      </a>
-  
-      <!-- Center: THE FIELD -->
-      <div class="flex-grow-1 text-center  mb-0">
-        <h1 class="m-0 text-black d-none d-md-block" style="color: #202020; font-size: 3.0rem; letter-spacing: 1px; font-weight: 800;">THE FIELD</h1>
-        <h1 class="m-0 text-black d-block d-md-none" style="color: #202020; font-size: 2.1rem; letter-spacing: 1px; font-weight: 900;">THE FIELD</h1>
-      </div>
-  
-      <!-- Right: Social Links and Search -->
-      <div class="d-flex align-items-center ms-auto  mb-0">
-        <div class="social-links">
-          <a href="#" class="linkedin">
-            <i class="bi bi-linkedin fs-2" style="color: #004aad; height: 2.8rem;"></i>
-          </a>
+      <div class="top-row d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-end">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">Blogy</h1><span>.</span>
+        </a>
+
+        <div class="d-flex align-items-center">
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+
+          <form class="search-form ms-4">
+            <input type="text" placeholder="Search..." class="form-control">
+            <button type="submit" class="btn"><i class="bi bi-search"></i></button>
+          </form>
         </div>
       </div>
-  
-      <!--<form class="search-form">
-        <input type="text" placeholder="Search..." class="form-control">
-        <button type="submit" class="btn"><i class="bi bi-search"></i></button>
-      </form>-->
+
     </div>
-  </div>
-    
-    <!-- Navigation Tab -->
-    <hr>
-      <div class="container-fluid mt-2">
-        <nav class="d-flex justify-content-center w-100 overflow-auto">
-          <ul class="navbar-nav flex-row flex-nowrap text-nowrap">
-            <li class="nav-item me-4">
-              <a class="nav-link p-0 fw-bold text-decoration-underline active" href="index.html">Home</a>
+
+    <div class="nav-wrap">
+      <div class="container d-flex justify-content-center position-relative">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="blog-details.html">Blog Details</a></li>
+            <li><a href="author-profile.html">Author Profile</a></li>
+            <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="blog-details.html">Blog Details</a></li>
+                <li><a href="author-profile.html">Author Profile</a></li>
+                <li><a href="search-results.html">Search Results</a></li>
+                <li><a href="404.html">404 Not Found Page</a></li>
+
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+              </ul>
             </li>
-            <li class="nav-item me-4">
-              <a class="nav-link p-0" href="field/about.html">About</a>
-            </li>
-            <li class="nav-item me-4">
-              <a class="nav-link p-0" href="field/category.html">NBA Forecasts</a>
-            </li>
-            <li class="nav-item me-4">
-              <a class="nav-link p-0" href="blog.html">Soccer Models</a>
-            </li>
-            <li class="nav-item me-4">
-              <a class="nav-link p-0" href="projects.html">College Hunger Games</a>
-            </li>
-            <li class="nav-item me-4">
-              <a class="nav-link p-0" href="projects.html">Blog Archive</a>
-            </li>
-            <li class="nav-item me-4">
-              <a class="nav-link p-0" href="projects.html">Portfolio</a>
-            </li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
       </div>
-    <hr>
+    </div>
+
   </header>
 
   <main class="main">
@@ -112,67 +113,67 @@
 
           <!-- Featured Post (Large) -->
           <article class="blog-item featured" data-aos="fade-up">
-            <img src="field/assets/img/blog/blog-post-3.webp" alt="Blog Image" class="img-fluid">
+            <img src="assets/img/blog/blog-post-3.webp" alt="Blog Image" class="img-fluid">
             <div class="blog-content">
               <div class="post-meta">
                 <span class="date">Apr. 14th, 2025</span>
-                <span class="category">NBA Forecasts</span>
+                <span class="category">Technology</span>
               </div>
               <h2 class="post-title">
-                <a href="field/blog-details.html" title="2025 NBA Play-In Player Forecasts"</a>
+                <a href="blog-details.html" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
               </h2>
             </div>
           </article><!-- End Featured Post -->
 
           <!-- Regular Posts -->
           <article class="blog-item" data-aos="fade-up" data-aos-delay="100">
-            <img src="field/assets/img/blog/blog-post-portrait-1.webp" alt="Blog Image" class="img-fluid">
+            <img src="assets/img/blog/blog-post-portrait-1.webp" alt="Blog Image" class="img-fluid">
             <div class="blog-content">
               <div class="post-meta">
                 <span class="date">Apr. 14th, 2025</span>
-                <span class="category">Soccer Models</span>
+                <span class="category">Security</span>
               </div>
               <h3 class="post-title">
-                <a href="field/blog-details.html" title="2025 Champions League Tournament Forecasts"</a>
+                <a href="blog-details.html" title="Sed do eiusmod tempor incididunt ut labore">Sed do eiusmod tempor incididunt ut labore</a>
               </h3>
             </div>
           </article><!-- End Blog Item -->
 
           <article class="blog-item" data-aos="fade-up" data-aos-delay="200">
-            <img src="field/assets/img/blog/blog-post-9.webp" alt="Blog Image" class="img-fluid">
+            <img src="assets/img/blog/blog-post-9.webp" alt="Blog Image" class="img-fluid">
             <div class="blog-content">
               <div class="post-meta">
                 <span class="date">Apr. 14th, 2025</span>
                 <span class="category">Career</span>
               </div>
               <h3 class="post-title">
-                <a href="field/blog-details.html" title="Ut enim ad minim veniam, quis nostrud exercitation">Ut enim ad minim veniam, quis nostrud exercitation</a>
+                <a href="blog-details.html" title="Ut enim ad minim veniam, quis nostrud exercitation">Ut enim ad minim veniam, quis nostrud exercitation</a>
               </h3>
             </div>
           </article><!-- End Blog Item -->
 
           <article class="blog-item" data-aos="fade-up" data-aos-delay="300">
-            <img src="field/assets/img/blog/blog-post-7.webp" alt="Blog Image" class="img-fluid">
+            <img src="assets/img/blog/blog-post-7.webp" alt="Blog Image" class="img-fluid">
             <div class="blog-content">
               <div class="post-meta">
                 <span class="date">Apr. 14th, 2025</span>
                 <span class="category">Cloud</span>
               </div>
               <h3 class="post-title">
-                <a href="field/blog-details.html" title="Adipiscing elit, sed do eiusmod tempor incididunt">Adipiscing elit, sed do eiusmod tempor incididunt</a>
+                <a href="blog-details.html" title="Adipiscing elit, sed do eiusmod tempor incididunt">Adipiscing elit, sed do eiusmod tempor incididunt</a>
               </h3>
             </div>
           </article><!-- End Blog Item -->
 
           <article class="blog-item" data-aos="fade-up" data-aos-delay="400">
-            <img src="field/assets/img/blog/blog-post-6.webp" alt="Blog Image" class="img-fluid">
+            <img src="assets/img/blog/blog-post-6.webp" alt="Blog Image" class="img-fluid">
             <div class="blog-content">
               <div class="post-meta">
                 <span class="date">Apr. 14th, 2025</span>
                 <span class="category">Programming</span>
               </div>
               <h3 class="post-title">
-                <a href="field/blog-details.html" title="Excepteur sint occaecat cupidatat non proident">Excepteur sint occaecat cupidatat non proident</a>
+                <a href="blog-details.html" title="Excepteur sint occaecat cupidatat non proident">Excepteur sint occaecat cupidatat non proident</a>
               </h3>
             </div>
           </article><!-- End Blog Item -->
@@ -188,8 +189,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Blogs</h2>
-        <div><span>Check</span> <span class="description-title">Out Featured Blogs</span></div>
+        <h2>Featured Posts</h2>
+        <div><span>Check Our</span> <span class="description-title">Featured Posts</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -222,52 +223,85 @@
           </script>
 
           <div class="swiper-wrapper">
-            
             <div class="swiper-slide">
               <div class="blog-post-item">
-                <img src="blog/home/images/post/hungergames.jpg" alt="Blog Image">
+                <img src="assets/img/blog/blog-post-portrait-1.webp" alt="Blog Image">
                 <div class="blog-post-content">
                   <div class="post-meta">
-                    <span><i class="bi bi-person"></i> Kareem Powell</span>
-                    <span><i class="bi bi-clock"></i> Mar 19, 2025</span>
+                    <span><i class="bi bi-person"></i> Julia Parker</span>
+                    <span><i class="bi bi-clock"></i> Jan 15, 2025</span>
+                    <span><i class="bi bi-chat-dots"></i> 6 Comments</span>
                   </div>
-                  <h2><a href="home/blogpost-5.html">U.S. College Hunger Games: The International Student Experience!</a></h2>
-                  <p>“We’re excited to share that you’ve been awarded a scholarship to study a Master’s in Financial Engineering in Los Angeles, California!”</p>
-                  <a href="home/blogpost-5.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
-            </div><!-- End slide item -->
-            
-            <div class="swiper-slide">
-              <div class="blog-post-item">
-                <img src="blog/home/images/post/blog-1a.jpg" alt="Blog Image">
-                <div class="blog-post-content">
-                  <div class="post-meta">
-                    <span><i class="bi bi-person"></i>Kareem Powell</span>
-                    <span><i class="bi bi-clock"></i> Jan 21, 2025</span>
-                  </div>
-                  <h2><a href="blog/home/blogpost-1.html">Navigating Tough Times to Achieve Your Future Goals!</a></h2>
-                  <p>We’ve all faced tough times. Many factors contribute, both external (war, economic instability, environmental disasters) and...</p>
-                  <a href="home/blogpost-1.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                  <h2><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</a></h2>
+                  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor metus eget lectus consequat, sit amet feugiat magna vulputate.</p>
+                  <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End slide item -->
 
             <div class="swiper-slide">
               <div class="blog-post-item">
-                <img src="blog/home/images/post/hungergames.jpg" alt="Blog Image">
+                <img src="assets/img/blog/blog-post-portrait-2.webp" alt="Blog Image">
                 <div class="blog-post-content">
                   <div class="post-meta">
-                    <span><i class="bi bi-person"></i> Kareem Powell</span>
-                    <span><i class="bi bi-clock"></i> Mar 4, 2025</span>
+                    <span><i class="bi bi-person"></i> Mark Wilson</span>
+                    <span><i class="bi bi-clock"></i> Jan 18, 2025</span>
+                    <span><i class="bi bi-chat-dots"></i> 6 Comments</span>
                   </div>
-                  <h2><a href="blog/home/blogpost-5.html">MoneyBall: The Power of Sports Analytics!</a></h2>
-                  <p>"Leicester City are champions of the Premier League! The greatest story ever told has its happy ending… The ultimate underdog is now the undisputed top dog!"</p>
-                  <a href="blog/home/blogpost-5.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                  <h2><a href="#">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</a></h2>
+                  <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet adipiscing sem neque sed ipsum.</p>
+                  <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End slide item -->
-            
+
+            <div class="swiper-slide">
+              <div class="blog-post-item">
+                <img src="assets/img/blog/blog-post-portrait-3.webp" alt="Blog Image">
+                <div class="blog-post-content">
+                  <div class="post-meta">
+                    <span><i class="bi bi-person"></i> Sarah Johnson</span>
+                    <span><i class="bi bi-clock"></i> Jan 21, 2025</span>
+                    <span><i class="bi bi-chat-dots"></i> 15 Comments</span>
+                  </div>
+                  <h2><a href="#">At vero eos et accusamus et iusto odio dignissimos ducimus</a></h2>
+                  <p>Nullam dictum felis eu pede mollis pretium integer tincidunt cras dapibus vivamus elementum semper nisi.</p>
+                  <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
+            <div class="swiper-slide">
+              <div class="blog-post-item">
+                <img src="assets/img/blog/blog-post-portrait-4.webp" alt="Blog Image">
+                <div class="blog-post-content">
+                  <div class="post-meta">
+                    <span><i class="bi bi-person"></i> David Brown</span>
+                    <span><i class="bi bi-clock"></i> Jan 24, 2025</span>
+                    <span><i class="bi bi-chat-dots"></i> 10 Comments</span>
+                  </div>
+                  <h2><a href="#">Et harum quidem rerum facilis est et expedita distinctio</a></h2>
+                  <p>Donec quam felis ultricies nec pellentesque eu pretium quis sem nulla consequat massa quis enim.</p>
+                  <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End slide item -->
+
+            <div class="swiper-slide">
+              <div class="blog-post-item">
+                <img src="assets/img/blog/blog-post-portrait-5.webp" alt="Blog Image">
+                <div class="blog-post-content">
+                  <div class="post-meta">
+                    <span><i class="bi bi-person"></i> Emma Davis</span>
+                    <span><i class="bi bi-clock"></i> Jan 27, 2025</span>
+                    <span><i class="bi bi-chat-dots"></i> 6 Comments</span>
+                  </div>
+                  <h2><a href="#">Nam libero tempore, cum soluta nobis est eligendi optio</a></h2>
+                  <p>Aenean leo ligula porttitor eu consequat vitae eleifend ac enim aliquam lorem ante dapibus in viverra.</p>
+                  <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End slide item -->
           </div>
 
         </div>
@@ -276,7 +310,6 @@
 
     </section><!-- /Featured Posts Section -->
 
-          
     <!-- Category Section Section -->
     <section id="category-section" class="category-section section">
 
@@ -292,19 +325,19 @@
           <div class="col-lg-4">
             <article class="featured-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Health</span>
                   <div class="author-meta">
-                    <img src="field/assets/img/person/person-f-13.webp" alt="" class="author-img">
+                    <img src="assets/img/person/person-f-13.webp" alt="" class="author-img">
                     <span class="author-name">William G.</span>
                     <span class="post-date">28 April 2024</span>
                   </div>
                 </div>
                 <h2 class="title">
-                  <a href="field/blog-details.html">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</a>
+                  <a href="blog-details.html">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</a>
                 </h2>
               </div>
             </article>
@@ -313,19 +346,19 @@
           <div class="col-lg-4">
             <article class="featured-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-7.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-7.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Education</span>
                   <div class="author-meta">
-                    <img src="field/assets/img/person/person-m-10.webp" alt="" class="author-img">
+                    <img src="assets/img/person/person-m-10.webp" alt="" class="author-img">
                     <span class="author-name">Emma D.</span>
                     <span class="post-date">30 May 2024</span>
                   </div>
                 </div>
                 <h2 class="title">
-                  <a href="field/blog-details.html">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis</a>
+                  <a href="blog-details.html">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis</a>
                 </h2>
               </div>
             </article>
@@ -334,19 +367,19 @@
           <div class="col-lg-4">
             <article class="featured-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-5.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-5.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Gaming</span>
                   <div class="author-meta">
-                    <img src="field/assets/img/person/person-f-14.webp" alt="" class="author-img">
+                    <img src="assets/img/person/person-f-14.webp" alt="" class="author-img">
                     <span class="author-name">James F.</span>
                     <span class="post-date">3 June 2024</span>
                   </div>
                 </div>
                 <h2 class="title">
-                  <a href="field/blog-details.html">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</a>
+                  <a href="blog-details.html">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</a>
                 </h2>
               </div>
             </article>
@@ -358,14 +391,14 @@
           <div class="col-xl-4 col-lg-6">
             <article class="list-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-6.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Gaming</span>
                 </div>
                 <h3 class="title">
-                  <a href="field/blog-details.html">Quis autem vel eum iure reprehenderit qui in ea voluptate</a>
+                  <a href="blog-details.html">Quis autem vel eum iure reprehenderit qui in ea voluptate</a>
                 </h3>
                 <div class="post-meta">
                   <span class="read-time">2 mins read</span>
@@ -378,14 +411,14 @@
           <div class="col-xl-4 col-lg-6">
             <article class="list-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-9.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-9.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Gaming</span>
                 </div>
                 <h3 class="title">
-                  <a href="field/blog-details.html">At vero eos et accusamus et iusto</a>
+                  <a href="blog-details.html">At vero eos et accusamus et iusto</a>
                 </h3>
                 <div class="post-meta">
                   <span class="read-time">2 mins read</span>
@@ -398,14 +431,14 @@
           <div class="col-xl-4 col-lg-6">
             <article class="list-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-10.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-10.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Gaming</span>
                 </div>
                 <h3 class="title">
-                  <a href="field/blog-details.html">Et harum quidem rerum facilis est et expedita distinctio</a>
+                  <a href="blog-details.html">Et harum quidem rerum facilis est et expedita distinctio</a>
                 </h3>
                 <div class="post-meta">
                   <span class="read-time">2 mins read</span>
@@ -418,14 +451,14 @@
           <div class="col-xl-4 col-lg-6">
             <article class="list-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-2.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-2.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Gaming</span>
                 </div>
                 <h3 class="title">
-                  <a href="field/blog-details.html">Nam libero tempore, cum soluta nobis est eligendi</a>
+                  <a href="blog-details.html">Nam libero tempore, cum soluta nobis est eligendi</a>
                 </h3>
                 <div class="post-meta">
                   <span class="read-time">2 mins read</span>
@@ -438,14 +471,14 @@
           <div class="col-xl-4 col-lg-6">
             <article class="list-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-1.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-1.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Gaming</span>
                 </div>
                 <h3 class="title">
-                  <a href="field/blog-details.html">Temporibus autem quibusdam et aut officiis debitis</a>
+                  <a href="blog-details.html">Temporibus autem quibusdam et aut officiis debitis</a>
                 </h3>
                 <div class="post-meta">
                   <span class="read-time">2 mins read</span>
@@ -458,14 +491,14 @@
           <div class="col-xl-4 col-lg-6">
             <article class="list-post">
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-3.webp" alt="" class="img-fluid" loading="lazy">
+                <img src="assets/img/blog/blog-post-3.webp" alt="" class="img-fluid" loading="lazy">
               </div>
               <div class="post-content">
                 <div class="category-meta">
                   <span class="post-category">Gaming</span>
                 </div>
                 <h3 class="title">
-                  <a href="field/blog-details.html">Itaque earum rerum hic tenetur a sapiente delectus</a>
+                  <a href="blog-details.html">Itaque earum rerum hic tenetur a sapiente delectus</a>
                 </h3>
                 <div class="post-meta">
                   <span class="read-time">2 mins read</span>
@@ -513,7 +546,7 @@
           </div>
 
           <div class="content-right position-relative" data-aos="fade-left" data-aos-delay="300">
-            <img src="field/assets/img/misc/misc-1.webp" alt="Digital Platform" class="img-fluid rounded-4">
+            <img src="assets/img/misc/misc-1.webp" alt="Digital Platform" class="img-fluid rounded-4">
             <div class="floating-card">
               <div class="card-icon">
                 <i class="bi bi-graph-up-arrow"></i>
@@ -552,17 +585,17 @@
             <article>
 
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-1.webp" alt="" class="img-fluid">
+                <img src="assets/img/blog/blog-post-1.webp" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="field/blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="field/assets/img/person/person-f-12.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/person-f-12.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Maria Doe</p>
                   <p class="post-date">
@@ -578,17 +611,17 @@
             <article>
 
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-2.webp" alt="" class="img-fluid">
+                <img src="assets/img/blog/blog-post-2.webp" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="field/blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="field/assets/img/person/person-f-13.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/person-f-13.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Allisa Mayer</p>
                   <p class="post-date">
@@ -604,17 +637,17 @@
             <article>
 
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-3.webp" alt="" class="img-fluid">
+                <img src="assets/img/blog/blog-post-3.webp" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="field/blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="field/assets/img/person/person-m-10.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/person-m-10.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Mark Dower</p>
                   <p class="post-date">
@@ -630,17 +663,17 @@
             <article>
 
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-4.webp" alt="" class="img-fluid">
+                <img src="assets/img/blog/blog-post-4.webp" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="field/blog-details.html">Non rem rerum nam cum quo minus olor distincti</a>
+                <a href="blog-details.html">Non rem rerum nam cum quo minus olor distincti</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="field/assets/img/person/person-f-14.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/person-f-14.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Lisa Neymar</p>
                   <p class="post-date">
@@ -656,17 +689,17 @@
             <article>
 
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-5.webp" alt="" class="img-fluid">
+                <img src="assets/img/blog/blog-post-5.webp" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="field/blog-details.html">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
+                <a href="blog-details.html">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="field/assets/img/person/person-m-11.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/person-m-11.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Denis Peterson</p>
                   <p class="post-date">
@@ -682,17 +715,17 @@
             <article>
 
               <div class="post-img">
-                <img src="field/assets/img/blog/blog-post-6.webp" alt="" class="img-fluid">
+                <img src="assets/img/blog/blog-post-6.webp" alt="" class="img-fluid">
               </div>
 
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="field/blog-details.html">Distinctio provident quibusdam numquam aperiam aut</a>
+                <a href="blog-details.html">Distinctio provident quibusdam numquam aperiam aut</a>
               </h2>
 
               <div class="d-flex align-items-center">
-                <img src="field/assets/img/person/person-f-15.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <img src="assets/img/person/person-f-15.webp" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
                   <p class="post-author">Mika Lendon</p>
                   <p class="post-date">
@@ -717,7 +750,7 @@
             <div class="cta-content" data-aos="fade-up" data-aos-delay="200">
               <h2>Subscribe to our newsletter</h2>
               <p>Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit.</p>
-              <form action="field/forms/newsletter.php" method="post" class="php-email-form cta-form" data-aos="fade-up" data-aos-delay="300">
+              <form action="forms/newsletter.php" method="post" class="php-email-form cta-form" data-aos="fade-up" data-aos-delay="300">
                 <div class="input-group mb-3">
                   <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address" aria-describedby="button-subscribe">
                   <button class="btn btn-primary" type="submit" id="button-subscribe">Subscribe</button>
@@ -730,7 +763,7 @@
           </div>
           <div class="col-lg-4">
             <div class="cta-image" data-aos="zoom-out" data-aos-delay="200">
-              <img src="field/assets/img/cta/cta-1.webp" alt="" class="img-fluid">
+              <img src="assets/img/cta/cta-1.webp" alt="" class="img-fluid">
             </div>
           </div>
         </div>
@@ -828,15 +861,15 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="field/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="field/assets/vendor/php-email-form/validate.js"></script>
-  <script src="field/assets/vendor/aos/aos.js"></script>
-  <script src="field/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="field/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="field/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="field/assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
