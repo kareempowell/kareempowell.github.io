@@ -103,51 +103,67 @@
 	  
     <div class="container mt-0">
 
-     <div class="row mt-0 mb-0">
-	  <div class="col-12 mt-0 mb-0">
-	    <div class="tags-section d-flex align-items-center gap-3 flex-nowrap overflow-auto">
-	      <!-- Mobile version (small font) -->
-	      <h4 class="widget-title mb-0 d-block d-sm-none fs-5">Topics:</h4>
-	      <!-- Desktop version (larger font) -->
-	      <h4 class="widget-title mb-0 d-none d-sm-block fs-4">Topics:</h4>
-	      <div class="tags d-flex align-items-center gap-3">
-	        <a href="#" style="
-	          background: color-mix(in srgb, var(--accent-color), transparent 90%);
-	          color: var(--accent-color);
-	          padding: 0.5rem 1rem;
-	          border-radius: 30px;
-	          font-size: 0.9rem;
-	          text-decoration: none;
-	          transition: all 0.3s ease;
-	          white-space: nowrap;">
-	          Personal Development
-	        </a>
-	        <a href="#" style="
-	          background: color-mix(in srgb, var(--accent-color), transparent 90%);
-	          color: var(--accent-color);
-	          padding: 0.5rem 1rem;
-	          border-radius: 30px;
-	          font-size: 0.9rem;
-	          text-decoration: none;
-	          transition: all 0.3s ease;
-	          white-space: nowrap;">
-	          Quantitative Consulting
-	        </a>
-	        <a href="#" style="
-	          background: color-mix(in srgb, var(--accent-color), transparent 90%);
-	          color: var(--accent-color);
-	          padding: 0.5rem 1rem;
-	          border-radius: 30px;
-	          font-size: 0.9rem;
-	          text-decoration: none;
-	          transition: all 0.3s ease;
-	          white-space: nowrap;">
-	          Algorithmic Trading
-	        </a>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+     <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fixed Topics with Scrolling Tags</title>
+  </head>
+  <body>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <!-- Left cell: static Topics header -->
+        <td nowrap>
+          <!-- Mobile version (small font) -->
+          <h4 class="widget-title d-block d-sm-none fs-5">Topics:</h4>
+          <!-- Desktop version (larger font) -->
+          <h4 class="widget-title d-none d-sm-block fs-4">Topics:</h4>
+        </td>
+        <!-- Right cell: scrolling tags -->
+        <td>
+          <marquee behavior="scroll" direction="left" scrollamount="3">
+            <div class="tags d-flex align-items-center gap-3">
+              <a href="#" style="
+                background: color-mix(in srgb, var(--accent-color), transparent 90%);
+                color: var(--accent-color);
+                padding: 0.5rem 1rem;
+                border-radius: 30px;
+                font-size: 0.9rem;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                white-space: nowrap;">
+                Personal Development
+              </a>
+              <a href="#" style="
+                background: color-mix(in srgb, var(--accent-color), transparent 90%);
+                color: var(--accent-color);
+                padding: 0.5rem 1rem;
+                border-radius: 30px;
+                font-size: 0.9rem;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                white-space: nowrap;">
+                Quantitative Consulting
+              </a>
+              <a href="#" style="
+                background: color-mix(in srgb, var(--accent-color), transparent 90%);
+                color: var(--accent-color);
+                padding: 0.5rem 1rem;
+                border-radius: 30px;
+                font-size: 0.9rem;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                white-space: nowrap;">
+                Algorithmic Trading
+              </a>
+            </div>
+          </marquee>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
     
 	    
       <!--Start Row-->
