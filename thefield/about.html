@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - Blogy Bootstrap Template</title>
+  <title>About - The Field</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/thefield.png" rel="icon">
+  <link href="assets/img/thefield.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -39,67 +39,63 @@
 <body class="about-page">
 
   <header id="header" class="header position-relative">
-    <div class="container-fluid container-xl position-relative">
+    <div class="container-fluid container-xl px-3 position-relative mb-0">
 
-      <div class="top-row d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-end">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.webp" alt=""> -->
-          <h1 class="sitename">Blogy</h1><span>.</span>
-        </a>
-
-        <div class="d-flex align-items-center">
-          <div class="social-links">
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          </div>
-
-          <form class="search-form ms-4">
-            <input type="text" placeholder="Search..." class="form-control">
-            <button type="submit" class="btn"><i class="bi bi-search"></i></button>
-          </form>
+    <div class="top-row d-flex align-items-center justify-content-between w-100">
+      <!-- Left: Logo -->
+      <a href="../home.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/thefield.png" alt="The Field Logo" class="d-block" style="height: 2.8rem; width: auto;">
+      </a>
+  
+      <!-- Center: THE FIELD -->
+      <div class="flex-grow-1 text-center  mb-0">
+        <h1 class="m-0 text-black d-none d-md-block" style="color: #202020; font-size: 3.0rem; letter-spacing: 1px; font-weight: 900;">THE FIELD</h1>
+        <h1 class="m-0 text-black d-block d-md-none" style="color: #202020; font-size: 2.5rem; letter-spacing: 1px; font-weight: 900;">THE FIELD</h1>
+      </div>
+  
+      <!-- Right: Social Links and Search -->
+      <div class="d-flex align-items-center ms-auto  mb-0">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/kareem-powell/" target=_blank class="linkedin">
+            <i class="bi bi-linkedin fs-2" style="color: #004aad; height: 2.8rem;"></i>
+          </a>
         </div>
       </div>
-
+  
+      <!--<form class="search-form">
+        <input type="text" placeholder="Search..." class="form-control">
+        <button type="submit" class="btn"><i class="bi bi-search"></i></button>
+      </form>-->
     </div>
-
-    <div class="nav-wrap">
-      <div class="container d-flex justify-content-center position-relative">
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="category.html">Category</a></li>
-            <li><a href="blog-details.html">Blog Details</a></li>
-            <li><a href="author-profile.html">Author Profile</a></li>
-            <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="category.html">Category</a></li>
-                <li><a href="blog-details.html">Blog Details</a></li>
-                <li><a href="author-profile.html">Author Profile</a></li>
-                <li><a href="search-results.html">Search Results</a></li>
-                <li><a href="404.html">404 Not Found Page</a></li>
-
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-              </ul>
+  </div>
+    
+    <!-- Navigation Tab -->
+    <hr>
+      <div class="container-fluid mt-1">
+        <nav class="d-flex justify-content-center w-100 overflow-auto">
+          <ul class="navbar-nav flex-row flex-nowrap text-nowrap">
+            <li class="nav-item me-4">
+              <a class="nav-link p-0" href="../home.html" style="border-bottom: 4px solid transparent; padding-bottom: 4px;">Home</a>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-item me-4">
+              <a class="nav-link p-0" href="#!" style="border-bottom: 4px solid transparent; padding-bottom: 4px;">NBA Forecasts</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link p-0" href="#!" style="border-bottom: 4px solid transparent; padding-bottom: 4px;">Football Predictions</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link p-0 fw-bold active" href="blogs.html" style="border-bottom: 4px solid black; padding-bottom: 4px;">Blogs</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link p-0" href="../index.html" style="border-bottom: 4px solid transparent; padding-bottom: 4px;">Portfolio</a>
+            </li>
+	    <li class="nav-item me-4">
+              <a class="nav-link p-0" href="#!" style="border-bottom: 4px solid transparent; padding-bottom: 4px;">About</a>
+            </li>	  
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
       </div>
-    </div>
-
+    <hr>
   </header>
 
   <main class="main">
@@ -109,18 +105,11 @@
       <div class="breadcrumbs">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
+            <li class="breadcrumb-item"><a href="../home.html"><i class="bi bi-house"></i> Home</a></li>
             <li class="breadcrumb-item active current">About</li>
           </ol>
         </nav>
       </div>
-
-      <div class="title-wrapper">
-        <h1>About</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-      </div>
-    </div><!-- End Page Title -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -129,54 +118,9 @@
 
         <span class="section-badge"><i class="bi bi-info-circle"></i> About Us</span>
         <div class="row">
-          <div class="col-lg-6">
-            <h2 class="about-title">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
-            <p class="about-description">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
-          </div>
-          <div class="col-lg-6">
-            <p class="about-text">Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-            <p class="about-text">Amet eos ut. Officiis soluta ab id dolor non sint. Corporis omnis consequatur quisquam ex consequuntur quo omnis. Quo eligendi cum. Amet mollitia qui quidem dolores praesentium quasi ut et.</p>
-          </div>
-        </div>
-
-        <div class="row features-boxes gy-4 mt-3">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="feature-box">
-              <div class="icon-box">
-                <i class="bi bi-bullseye"></i>
-              </div>
-              <h3><a href="#" class="stretched-link">At vero eos</a></h3>
-              <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="feature-box">
-              <div class="icon-box">
-                <i class="bi bi-person-check"></i>
-              </div>
-              <h3><a href="#" class="stretched-link">Sed ut perspiciatis</a></h3>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="feature-box">
-              <div class="icon-box">
-                <i class="bi bi-clipboard-data"></i>
-              </div>
-              <h3><a href="#" class="stretched-link">Nemo enim ipsam</a></h3>
-              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="200">
-            <div class="video-box">
-              <img src="assets/img/about/about-wide-1.webp" class="img-fluid" alt="Video Thumbnail">
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
-            </div>
+          <div class="col-lg-8">
+            <h2 class="about-title">What's The Field?</h2>
+            <p class="about-description">Combining data science, modeling, and a passion for sports, The Field aims to provide predictive analyses across my favorite sports competition: NBA, Barclays Premier League, La Liga, and the Champions League.</p>
           </div>
         </div>
 
@@ -190,7 +134,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Team</h2>
-        <div><span>Check Our</span> <span class="description-title">Team</span></div>
+        <div><span>The Field's Creator:</span> <span class="description-title">Team</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -203,109 +147,11 @@
                 <img src="assets/img/person/person-m-7.webp" class="img-fluid" alt="" loading="lazy">
               </div>
               <div class="member-info flex-grow-1">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Kareem Powell</h4>
+                <span>Sports Analyst</span>
                 <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="assets/img/person/person-f-8.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores exercitationem ut</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="assets/img/person/person-m-6.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="assets/img/person/person-f-4.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi quam consectetur</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="assets/img/person/person-m-12.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Brian Doe</h4>
-                <span>Marketing</span>
-                <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="team-member d-flex">
-              <div class="member-img">
-                <img src="assets/img/person/person-f-9.webp" class="img-fluid" alt="" loading="lazy">
-              </div>
-              <div class="member-info flex-grow-1">
-                <h4>Josepha Palas</h4>
-                <span>Operation</span>
-                <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit eligendi cupiditate vel</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                  <a href=""><i class="bi bi-youtube"></i></a>
                 </div>
               </div>
             </div>
@@ -321,81 +167,14 @@
 
   <footer id="footer" class="footer">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Blogy</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
-          <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Blogy</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">The Field</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed using <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
